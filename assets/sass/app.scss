@@ -122,6 +122,7 @@ html, body {
 body {
   overflow: hidden;
   font-family: 'FMRegular', Georgia, serif;
+  color: $darkGray;
 
   &.loaded,
   .no-js & {
@@ -166,9 +167,11 @@ img {
 // Headers
 
 h1 {
+  margin: 1em 0;
   font-family: 'DanmarkMedium', Georgia, serif;
   text-transform: uppercase;
   font-size: 1.4em;
+  line-height: 1.2;
   letter-spacing: 15px;
 }
 
@@ -222,6 +225,11 @@ hr {
 /*----- Scaffolding -----*/
 
 @import 'vendor/grid';
+
+.wrapper {
+  max-width: 450px;
+  margin: 0 auto;
+}
 
 
 /*----- Header -----*/
@@ -380,6 +388,7 @@ ul.social {
   padding: .75em 0;
   text-align: center;
   text-transform: uppercase;
+  z-index: 3;
   transform: translate3d(-100%, 0, 0);
   transition: transform .4s ease;
   transition-delay: .7s;
@@ -393,7 +402,7 @@ ul.social {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 2em 4em;
+    padding: 0 4em 2em 0;
     height: auto;
     background: none;
     text-align: right;
@@ -533,7 +542,7 @@ ul.social {
   background-size: cover;
   padding-top: 40px;
   padding-bottom: 70px;
-  height: 420px;
+  height: 450px;
 
   .logo {
     position: relative;
@@ -554,6 +563,98 @@ ul.social {
 
 .sections {
   margin-top: -70px;
+  transition: margin .2s ease;
+
+  .section-open & {
+    margin-top: 0;
+  }
+  
+  // NAVIGATION BANDS
+  &.nav {
+
+    .band {
+      background: rgba($gray, .7);
+      color: $white;
+      height: 70px;
+
+      .section-open & {
+        &.top {
+          background: rgba($gray, .7) url('/assets/img/bg.top.jpg') center center no-repeat;
+          background-size: cover;
+        }
+      }
+      
+      &.middle {
+        background: rgba($gray, .7) url('https://images.unsplash.com/photo-1441986380878-c4248f5b8b5b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
+        background-size: cover;
+        transition-delay: .3s;
+      }
+
+      &.bottom {
+        background: rgba($gray, .7) url('https://images.unsplash.com/photo-1459664018906-085c36f472af?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
+        background-size: cover;
+        transition-delay: .5s;
+      }
+
+      &.active {
+        display: none;
+      }
+
+      @media (min-width: $tablet-break) {
+        height: auto;
+        
+        &.top {
+          background: rgba($gray, .7) url('/assets/img/bg.top.jpg') center center no-repeat;
+          background-size: cover;
+        }
+
+        &.active {
+          display: block !important;
+        }
+      }
+    }
+  }
+  
+  // CONTENT BANDS
+  &.pages {
+    display: none;
+    z-index: 2;
+
+    .section-open & {
+      display: block;
+    }
+
+    .band {
+      background: rgba($white, .9);
+
+      &.active {
+        background: rgba($white, 0);
+      }
+    }
+
+    .content {
+      display: none;
+      margin: 0 auto;
+      padding: 0 1.5em;
+      max-width: 1200px;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    @media (min-width: $tablet-break) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      .content {
+        padding: 0;
+      }
+    }
+  }
 
   @media (min-width: $tablet-break) {
     display: flex;
@@ -565,11 +666,8 @@ ul.social {
 
   .band {
     position: relative;
-    height: 70px;
     text-align: center;
     opacity: 0;
-    background: rgba($gray, .7);
-    color: $white;
     transform: translate3d(-100%, 0, 0);
     transition: transform .4s ease, opacity .2s linear;
 
@@ -584,14 +682,10 @@ ul.social {
     }
 
     &.middle {
-      background: rgba($gray, .7) url('https://images.unsplash.com/photo-1441986380878-c4248f5b8b5b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
-      background-size: cover;
       transition-delay: .3s;
     }
 
     &.bottom {
-      background: rgba($gray, .7) url('https://images.unsplash.com/photo-1459664018906-085c36f472af?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
-      background-size: cover;
       transition-delay: .5s;
     }
 
@@ -600,13 +694,7 @@ ul.social {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      min-height: 320px;
-      height: auto;
-
-      &.top {
-        background: rgba($gray, .7) url('/assets/img/bg.top.jpg') center center no-repeat;
-        background-size: cover;
-      }
+      min-height: 420px;
     }
   }
 }
@@ -625,6 +713,7 @@ a.section-link {
   width: 100%;
   height: 100%;
   color: $white;
+  transition: opacity .2s linear;
 
   &::before {
     content: '';
@@ -642,6 +731,10 @@ a.section-link {
 
     .top & {
       display: none;
+    }
+
+    .section-open & {
+      display: block !important;
     }
 
     @media (min-width: $tablet-break) {
@@ -666,6 +759,7 @@ a.section-link {
   }
 
   h1 {
+    margin: 0;
     font-size: .7em;
     letter-spacing: 6px;
     transition: color .3s linear;
@@ -686,7 +780,21 @@ a.section-link {
     }
   }
 
+  .icon {
+    margin: .4em auto 0;
+    width: 10px;
+    height: 10px;
+
+    @media (min-width: $tablet-break) {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-break) {
+    .section-open & {
+      opacity: 0;
+    }
+    
     &:hover {
       color: $white;
 
@@ -698,6 +806,32 @@ a.section-link {
       h1 {
         color: $white;
       }
+    }
+  }
+}
+
+// sliders
+.slider {
+  .slide {
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: $tablet-break) {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 1em;
+
+    .slide {
+      flex: 0;
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+      padding: 0 1em;
     }
   }
 }
