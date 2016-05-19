@@ -1,6 +1,6 @@
 $(window).load(function() {
   setTimeout(function() {
-    // what
+    console.log('loaded');
   }, 1000);
 });
 
