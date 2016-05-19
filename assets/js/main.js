@@ -1,8 +1,7 @@
 $(window).load(function() {
-  $('.loader').velocity({
+  $('.loader').delay(800).velocity({
     opacity: 0
   }, {
-    delay: 1000,
     complete: function() {
       $('body').addClass('loaded');
     }
