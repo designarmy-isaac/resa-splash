@@ -11,13 +11,13 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/img\/bg.philosophy.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/apple-touch-icon-152x152-precomposed.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 203929,
-		"inputAbbreviatedPath": "\/assets\/img\/bg.philosophy.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/bg.philosophy.jpg",
+		"initialSize": 4496,
+		"inputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-152x152-precomposed.png",
+		"outputAbbreviatedPath": "\/assets\/img\/apple-touch-icon-152x152-precomposed.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -29,6 +29,17 @@
 		"initialSize": 592815,
 		"inputAbbreviatedPath": "\/assets\/img\/bg.top.jpg",
 		"outputAbbreviatedPath": "\/assets\/img\/bg.top.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/RESA-share.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.43683e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/RESA-share.png",
+		"outputAbbreviatedPath": "\/assets\/img\/RESA-share.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -173,6 +184,15 @@
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
 		"useLibsass": 0
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/jade\/layout.jade": {
 		"compileDebug": 1,
