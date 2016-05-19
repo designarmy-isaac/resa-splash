@@ -1,6 +1,10 @@
 $(window).load(function() {
-  setTimeout(function() {
-    console.log('loaded');
-  }, 1000);
+  $('.loader').velocity({
+    opacity: 0
+  }, {
+    delay: 800,
+    complete: function() {
+      $('body').addClass('loaded');
+    }
+  });
 });
-
