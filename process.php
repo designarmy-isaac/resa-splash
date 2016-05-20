@@ -1,9 +1,9 @@
 <?php
   require_once('wufoo/WufooApiWrapper.php');
 
-  $api_key      = 'IOMI-VDAU-P2I8-DG7U';
-  $form_hash    = 'm11z3w8a0wg4xzt';
-  $wufoo_id     = 'live7770';  
+  $api_key      = 'PKP0-XK25-EIZD-MWKZ';
+  $form_hash    = 'z1ow4dfd08m61sb';
+  $wufoo_id     = 'resanoma';  
   $api        = new WufooApiWrapper($api_key, $wufoo_id);
   
   $data_fname      = $_POST['contact_fname'];

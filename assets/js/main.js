@@ -43,6 +43,10 @@ function showContent(sectionIndex) {
 //- Hide Content Bands
 function hideContent() {
   $('body').removeClass('section-open');
+  setTimeout(function() {
+    $('.sections .band').removeClass('active peek');
+    $('.pages .band .content').removeClass('active');
+  }, 400);
 }
 
 //-- Re-init/Destroy Galleries on Resize
@@ -148,7 +152,9 @@ $(document).ready(function(){
             $('#sign-up .btn').text('Error! Try again');
 
           } else if(response['Success'] === 1) {
-            // $('#sign-up').
+            $('#sign-up .fields').velocity('fadeOut', 300, function() {
+              $('#sign-up .success').velocity('fadeIn', 300);
+            });
           }
         },
         error: function() {

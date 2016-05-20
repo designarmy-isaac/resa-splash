@@ -179,9 +179,17 @@ h1 {
     color: $white;
   }
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $tablet-break) {
     font-size: 1.4em;
     letter-spacing: 15px;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -995,6 +1003,14 @@ ul.slick-dots {
 .form {
   max-width: 800px;
   margin: 0 auto;
+}
+
+.success {
+  display: none;
+
+  @media (min-width: $tablet-break) {
+    margin-top: 6em;
+  }
 }
 
 .fields {

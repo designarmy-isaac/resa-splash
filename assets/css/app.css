@@ -262,10 +262,14 @@ h1 {
   letter-spacing: 10px; }
   h1.white {
     color: #ffffff; }
+  h1 br {
+    display: none; }
   @media (min-width: 768px) {
     h1 {
       font-size: 1.4em;
-      letter-spacing: 15px; } }
+      letter-spacing: 15px; }
+      h1 br {
+        display: block; } }
 
 blockquote {
   display: block;
@@ -1042,6 +1046,12 @@ ul.slick-dots {
 .form {
   max-width: 800px;
   margin: 0 auto; }
+
+.success {
+  display: none; }
+  @media (min-width: 768px) {
+    .success {
+      margin-top: 6em; } }
 
 .fields .field {
   margin-bottom: 1em; }
