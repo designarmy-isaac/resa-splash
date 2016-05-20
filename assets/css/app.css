@@ -619,11 +619,13 @@ ul.social {
 
 /*----- Sections ----- */
 .mobile-top {
+  position: relative;
   background: #ffffff url("/assets/img/bg.top.jpg") center center no-repeat;
   background-size: cover;
   padding-top: 40px;
   padding-bottom: 70px;
-  height: 450px; }
+  height: 450px;
+  overflow: hidden; }
   .mobile-top .logo {
     position: relative;
     top: 50%;
@@ -634,6 +636,51 @@ ul.social {
     .mobile-top .logo svg {
       width: 210px;
       height: 35px; }
+  .mobile-top .section-header {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-transition: -webkit-transform .4s ease, opacity .2s linear;
+            transition: transform .4s ease, opacity .2s linear; }
+    .mobile-top .section-header br {
+      display: block; }
+    .mobile-top .section-header.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); }
+    .mobile-top .section-header.middle {
+      background: #ffffff url("/assets/img/bg.middle.jpg") center center no-repeat;
+      background-size: cover; }
+    .mobile-top .section-header.bottom {
+      background: #ffffff url("/assets/img/bg.bottom.jpg") center center no-repeat;
+      background-size: cover; }
   @media (min-width: 768px) {
     .mobile-top {
       display: none; } }

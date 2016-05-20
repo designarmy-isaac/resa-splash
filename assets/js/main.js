@@ -17,7 +17,8 @@ function showContent(sectionIndex) {
   $('body').addClass('section-open');
 
   // set active section item
-  $('.sections .band').removeClass('active peek');
+  $('.sections .band, .section-header').removeClass('active peek');
+  $('.section-header').eq(sectionIndex).addClass('active');
   $('.sections').each(function() {
     $('.band', this).eq(sectionIndex).addClass('active');
   });
