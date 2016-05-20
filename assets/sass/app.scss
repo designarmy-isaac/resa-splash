@@ -171,12 +171,17 @@ h1 {
   font-family: 'DanmarkMedium', Georgia, serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.2;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
 
   &.white {
     color: $white;
+  }
+
+  @media (min-width: $tablet-break) {
+    font-size: 1.4em;
+    letter-spacing: 15px;
   }
 }
 
@@ -231,8 +236,8 @@ hr {
   display: block;
   width: 100%;
   padding: .5em;
-  background: $white;
-  color: $darkGray;
+  background: $darkGray;
+  color: $white;
   font-family: 'DanmarkBold', Georgia, serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -247,6 +252,11 @@ hr {
   &:hover {
     background: $darkGray;
     color: $white;
+  }
+
+  @media (min-width: $tablet-break) {
+    background: $white;
+    color: $darkGray;
   }
 }
 
@@ -947,6 +957,41 @@ a.section-link {
   }
 }
 
+ul.slick-dots {
+  list-style: none;
+  margin: 1em auto 0;
+  padding: 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    margin: 0 .4em;
+
+    button {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 7px;
+      height: 7px;
+      min-height: 0;
+      border: none;
+      background: $lightGray;
+      text-indent: -9999px;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      transform: rotate(45deg);
+      transition: all .2s linear;
+    }
+
+    &.slick-active {
+      button {
+        background: $gray;
+      }
+    }
+  }
+}
+
 .form {
   max-width: 800px;
   margin: 0 auto;
@@ -954,11 +999,15 @@ a.section-link {
 
 .fields {
   .field {
+    margin-bottom: 1em;
+    
     label {
       display: block;
       text-transform: uppercase;
       font-family: 'DanmarkBold', Georgia, serif;
+      font-size: .8em;
       letter-spacing: 2px;
+      text-align: left;
 
       &.error {
         display: none !important;
@@ -968,9 +1017,10 @@ a.section-link {
     .form-control {
       display: block;
       width: 100%;
-      padding: .5em;
+      padding: 1em;
       border: 1px solid $gray;
       color: $gray;
+      font-size: .75em;
       transition: all .2s linear;
 
       &:focus {
@@ -998,11 +1048,13 @@ a.section-link {
       flex: 0;
       flex-basis: 33.333%;
       max-width: 33.333%;
+      margin: 0;
       padding: 0 .75em;
       text-align: center;
 
       label {
         margin: 5em 0 1em;
+        text-align: center;
       }
 
       .form-control {

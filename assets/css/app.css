@@ -257,11 +257,15 @@ h1 {
   font-family: 'DanmarkMedium', Georgia, serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-size: 1.4em;
+  font-size: 1.2em;
   line-height: 1.2;
-  letter-spacing: 15px; }
+  letter-spacing: 10px; }
   h1.white {
     color: #ffffff; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 1.4em;
+      letter-spacing: 15px; } }
 
 blockquote {
   display: block;
@@ -278,8 +282,8 @@ blockquote {
   display: block;
   width: 100%;
   padding: .5em;
-  background: #ffffff;
-  color: #231f20;
+  background: #231f20;
+  color: #ffffff;
   font-family: 'DanmarkBold', Georgia, serif;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -292,6 +296,10 @@ blockquote {
   .btn:hover {
     background: #231f20;
     color: #ffffff; }
+  @media (min-width: 768px) {
+    .btn {
+      background: #ffffff;
+      color: #231f20; } }
 
 /*----- Scaffolding -----*/
 .wrapper {
@@ -1002,30 +1010,64 @@ a.section-link {
           .gallery.full-split .slide img {
             display: none; } }
 
+ul.slick-dots {
+  list-style: none;
+  margin: 1em auto 0;
+  padding: 0;
+  text-align: center; }
+  ul.slick-dots li {
+    display: inline-block;
+    margin: 0 .4em; }
+    ul.slick-dots li button {
+      display: block;
+      margin: 0;
+      padding: 0;
+      width: 7px;
+      height: 7px;
+      min-height: 0;
+      border: none;
+      background: #d2d2d3;
+      text-indent: -9999px;
+      overflow: hidden;
+      outline: none;
+      cursor: pointer;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transition: all .2s linear;
+              transition: all .2s linear; }
+    ul.slick-dots li.slick-active button {
+      background: #404041; }
+
 .form {
   max-width: 800px;
   margin: 0 auto; }
 
-.fields .field label {
-  display: block;
-  text-transform: uppercase;
-  font-family: 'DanmarkBold', Georgia, serif;
-  letter-spacing: 2px; }
-  .fields .field label.error {
-    display: none !important; }
-.fields .field .form-control {
-  display: block;
-  width: 100%;
-  padding: .5em;
-  border: 1px solid #404041;
-  color: #404041;
-  -webkit-transition: all .2s linear;
-          transition: all .2s linear; }
-  .fields .field .form-control:focus {
-    outline: none; }
-.fields .field.error .form-control {
-  border-color: #E35751;
-  color: #E35751; }
+.fields .field {
+  margin-bottom: 1em; }
+  .fields .field label {
+    display: block;
+    text-transform: uppercase;
+    font-family: 'DanmarkBold', Georgia, serif;
+    font-size: .8em;
+    letter-spacing: 2px;
+    text-align: left; }
+    .fields .field label.error {
+      display: none !important; }
+  .fields .field .form-control {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border: 1px solid #404041;
+    color: #404041;
+    font-size: .75em;
+    -webkit-transition: all .2s linear;
+            transition: all .2s linear; }
+    .fields .field .form-control:focus {
+      outline: none; }
+  .fields .field.error .form-control {
+    border-color: #E35751;
+    color: #E35751; }
 @media (min-width: 768px) {
   .fields {
     -webkit-box-flex: 1;
@@ -1058,10 +1100,12 @@ a.section-link {
           -ms-flex-preferred-size: 33.333%;
               flex-basis: 33.333%;
       max-width: 33.333%;
+      margin: 0;
       padding: 0 .75em;
       text-align: center; }
       .fields .field label {
-        margin: 5em 0 1em; }
+        margin: 5em 0 1em;
+        text-align: center; }
       .fields .field .form-control {
         text-align: center; }
       .fields .field.submit {

@@ -55,6 +55,39 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/bottom-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 226573,
+		"inputAbbreviatedPath": "\/assets\/img\/bottom-2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/bottom-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/bottom-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 192646,
+		"inputAbbreviatedPath": "\/assets\/img\/bottom-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/bottom-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/middle-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 234155,
+		"inputAbbreviatedPath": "\/assets\/img\/middle-1.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/middle-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/RESA-share.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -62,6 +95,39 @@
 		"initialSize": 1.43683e+06,
 		"inputAbbreviatedPath": "\/assets\/img\/RESA-share.png",
 		"outputAbbreviatedPath": "\/assets\/img\/RESA-share.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/top-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 290005,
+		"inputAbbreviatedPath": "\/assets\/img\/top-1.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/top-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/top-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 142028,
+		"inputAbbreviatedPath": "\/assets\/img\/top-2.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/top-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/top-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 212995,
+		"inputAbbreviatedPath": "\/assets\/img\/top-3.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/top-3.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
