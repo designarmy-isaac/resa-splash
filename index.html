@@ -57,7 +57,7 @@
     <div class="mobile-top">
       <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 70"><title>RESA</title><path d="M386.0666,4.0104 L381.5206,4.0104 L400.5116,44.9204 L400.4876,44.9204 L400.5796,45.1204 L370.0026,45.1204 L368.1266,49.0874 L402.1146,49.0874 L410.6776,67.2974 L415.3676,67.2974 L415.3676,66.7574 L386.0666,4.0104 Z" id="letter-R"></path><path d="M260.5816,32.6602 C252.2866,31.6682 241.4696,30.9472 241.4696,20.4882 C241.4696,11.0222 250.5736,7.0552 259.4106,7.0552 C267.3446,7.0552 277.8906,9.7612 278.6136,19.4982 L282.8516,19.4982 C282.1286,7.5972 271.1306,3.0002 259.4106,3.0002 C248.8616,3.0002 236.8706,8.4992 236.8706,20.5792 C236.8706,33.2002 248.3196,35.0932 259.8596,36.5372 C269.6866,37.9782 280.3256,39.2412 280.0556,49.8792 C279.7846,59.7972 269.5056,64.0332 260.4006,64.0332 C251.8386,64.0332 240.2046,60.5172 239.4856,50.6002 L235.4286,50.6002 C236.1506,63.1312 249.0416,68.0002 260.5816,68.0002 C272.3016,68.0002 284.2926,62.4112 284.5636,49.9692 C284.8316,36.8082 272.7536,34.3732 260.5816,32.6602" id="letter-E"></path><path d="M129.1274,36.5369 L155.7464,36.5369 L159.6894,32.4799 L129.1274,32.4799 L129.1274,7.9589 L157.0054,7.9589 L161.0424,3.9919 L124.6204,3.9919 L124.6204,67.0989 L157.4784,67.0989 L161.3134,62.9509 L129.1274,62.9509 L129.1274,36.5369 Z" id="letter-S"></path><path d="M45.0011,23.6443 C45.0011,12.0143 36.0771,3.9913 23.8161,3.9913 L5.0001,3.9913 L5.0001,8.0473 L23.8161,8.0473 C33.1921,8.0473 40.5841,14.0883 40.5841,23.5543 C40.5841,33.2003 33.0111,39.0603 23.8161,39.0603 L20.0641,39.0603 L19.6711,39.0603 L26.0121,46.4433 L23.2601,43.0273 L23.2751,43.0273 L26.0121,46.4433 L26.0251,46.4593 L26.0121,46.4433 L42.5681,67.0983 L47.6171,67.0983 L47.6171,66.3773 L27.9621,42.4873 C37.6991,41.0443 45.0011,34.1023 45.0011,23.6443" id="letter-A"></path></svg></div>
     </div>
-    <div class="sections pages">
+    <div class="sections pages"><a href="" class="close"><svg class="icon"><use xlink:href="/assets/img/icons.svg#icon-close"></use></svg></a>
       <section class="band top">
         <div class="content empty"></div>
         <div class="content">
@@ -67,7 +67,11 @@
           </div>
         </div>
         <div class="content">
-          <h1>Philosophy (top)</h1>
+          <div class="gallery">
+            <div class="slide"><img src="https://images.unsplash.com/photo-1438893761775-f1db119d27b2?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=270&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=400"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1430390456011-25ac9244999c?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=270&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=400"></div>
+            <div class="slide"><img src="https://images.unsplash.com/photo-1428606715050-6bb5e6eeb4a1?crop=entropy&amp;dpr=2&amp;fit=crop&amp;fm=jpg&amp;h=270&amp;ixjsv=2.1.0&amp;ixlib=rb-0.3.5&amp;q=80&amp;w=400"></div>
+          </div>
         </div>
       </section>
       <section class="band middle">
@@ -79,7 +83,7 @@
           </div>
         </div>
         <div class="content">
-          <form id="sign-up" action="/process.php" method="post">
+          <form action="/process.php" method="post" id="sign-up" class="form">
             <div class="fields">
               <div class="field">
                 <label for="contact_fname">First Name</label>
@@ -93,16 +97,16 @@
                 <label for="contact_email">Email</label>
                 <input type="text" id="contact_email" name="contact_email" placeholder="REQUIRED" class="form-control">
               </div>
-            </div>
-            <div class="submit">
-              <button type="submit" class="btn">Submit</button>
+              <div class="field submit">
+                <button type="submit" class="btn">Submit</button>
+              </div>
             </div>
           </form>
         </div>
         <div class="content">
           <h1>Living at Resa</h1>
           <div class="wrapper">
-            <p>Here, living centers around the concept of lagom: creating a life that is “just right”. We find pleasure in  simple things: a glass of wine with friends, reading by the fire, the aroma of cardamom wafting from the oven.</p>
+            <p>Here, living centers around the concept of lagom: creating a life that is “just right”. We find pleasure in simple things: a glass of wine with friends, reading by the fire, the aroma of cardamom wafting from the oven.</p>
             <p>Our delight in practical simplicity is apparent in our design and spaces, which highlights and appreciates the intersection between beauty and functionality. Interior spaces are simple and uncluttered; they are warm, cozy and welcoming. We introduce, with great joy: Resa. </p>
           </div>
         </div>
@@ -113,7 +117,7 @@
           <div class="wrapper">
             <p>RESA is located in NOMA, the #1 most connected neighborhood in Washington DC. </p>
             <p>Boasting a sleek design, bountiful amenities and exciting new features, RESA is not only a residential haven but it is an oasis of receation in the center of the neighborhood. </p>
-            <p>A large green urban landscape, called the Noma meander, starts between RESA at 22M street and Tyber place at 88M street. It extends from M street all the way to New York Ave. It will be a pedestrian crossing point through Noma. which will feature retail, services, and retail. </p>
+            <p>A large green urban landscape, called the Noma meander, starts between RESA at 22M street and Tyber place at 88M street. It extends from M street all the way to New York Ave. It will be a pedestrian crossing point through Noma, which will feature services and retail. </p>
           </div>
         </div>
         <div class="content hide-mobile">
@@ -122,7 +126,7 @@
             <p>Fill out the above form to stay up to date on leasing dates and new information on RESA.</p>
           </div>
         </div>
-        <div class="content">
+        <div class="content hide-mobile">
           <h1>Our Philosophy</h1>
         </div>
       </section>

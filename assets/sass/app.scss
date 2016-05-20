@@ -169,10 +169,15 @@ img {
 h1 {
   margin: 1em 0;
   font-family: 'DanmarkMedium', Georgia, serif;
+  font-weight: normal;
   text-transform: uppercase;
   font-size: 1.4em;
   line-height: 1.2;
   letter-spacing: 15px;
+
+  &.white {
+    color: $white;
+  }
 }
 
 h2 {
@@ -219,6 +224,30 @@ hr {
   width: 1em;
   height: 1em;
   fill: currentColor;
+}
+
+// Buttons
+.btn {
+  display: block;
+  width: 100%;
+  padding: .5em;
+  background: $white;
+  color: $darkGray;
+  font-family: 'DanmarkBold', Georgia, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: none;
+  cursor: pointer;
+  transition: all .2s linear;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: $darkGray;
+    color: $white;
+  }
 }
 
 
@@ -295,10 +324,10 @@ hr {
     padding: 1em;
     width: 4em;
     height: 4em;
-    @include prefix(transition, transform .2s ease);
+    transition: transform .2s ease;
 
     &:hover {
-      @include prefix(transform, scale(1.1));
+      transform: scale(1.1);
     }
 
     svg {
@@ -317,6 +346,7 @@ hr {
   width: 400px;
   padding-left: 60px; // optically center
   text-transform: uppercase;
+  font-family: 'DanmarkBold', Georgia, serif;
   font-size: .5em;
   letter-spacing: 3px;
   @include prefix(transform, translate(-50%, -50%) rotate(-90deg));
@@ -502,7 +532,7 @@ ul.social {
 
 .loader {
   display: block;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -584,13 +614,13 @@ ul.social {
       }
       
       &.middle {
-        background: rgba($gray, .7) url('https://images.unsplash.com/photo-1441986380878-c4248f5b8b5b?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
+        background: rgba($gray, .7) url('/assets/img/bg.middle.jpg') center center no-repeat;
         background-size: cover;
         transition-delay: .3s;
       }
 
       &.bottom {
-        background: rgba($gray, .7) url('https://images.unsplash.com/photo-1459664018906-085c36f472af?crop=entropy&dpr=2&fit=crop&fm=jpg&h=825&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1375') center center no-repeat;
+        background: rgba($gray, .7) url('/assets/img/bg.bottom.jpg') center center no-repeat;
         background-size: cover;
         transition-delay: .5s;
       }
@@ -641,8 +671,9 @@ ul.social {
 
     .content {
       display: none;
-      margin: 0 auto;
+      margin: 0 auto 2em;
       padding: 0 1.5em;
+      width: 100%;
       max-width: 1200px;
 
       &.active {
@@ -664,6 +695,7 @@ ul.social {
       width: 100%;
 
       .content {
+        margin: 0 auto;
         padding: 0;
       }
     }
@@ -709,6 +741,35 @@ ul.social {
       justify-content: center;
       min-height: 420px;
     }
+  }
+}
+
+a.close {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1.75em 4em 0 0;
+  background: $gray;
+  color: $white;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  z-index: 9;
+  transition: background .2s linear, transform .2s ease;
+
+  svg {
+    margin: .5em;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background: $darkGray;
+  }
+
+  @media (min-width: $tablet-break) {
+    display: block;
   }
 }
 
@@ -804,6 +865,8 @@ a.section-link {
   }
 
   @media (min-width: $tablet-break) {
+    color: $gray;
+    
     .section-open & {
       opacity: 0;
     }
@@ -879,6 +942,75 @@ a.section-link {
         img {
           display: none;
         }
+      }
+    }
+  }
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.fields {
+  .field {
+    label {
+      display: block;
+      text-transform: uppercase;
+      font-family: 'DanmarkBold', Georgia, serif;
+      letter-spacing: 2px;
+
+      &.error {
+        display: none !important;
+      }
+    }
+
+    .form-control {
+      display: block;
+      width: 100%;
+      padding: .5em;
+      border: 1px solid $gray;
+      color: $gray;
+      transition: all .2s linear;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &.error {
+      .form-control {
+        border-color: #E35751;
+        color: #E35751;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-break) {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+
+    .field {
+      flex: 0;
+      flex-basis: 33.333%;
+      max-width: 33.333%;
+      padding: 0 .75em;
+      text-align: center;
+
+      label {
+        margin: 5em 0 1em;
+      }
+
+      .form-control {
+        text-align: center;
+      }
+
+      &.submit {
+        margin-top: 1em;
       }
     }
   }

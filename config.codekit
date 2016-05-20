@@ -22,6 +22,28 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/bg.bottom.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 455928,
+		"inputAbbreviatedPath": "\/assets\/img\/bg.bottom.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/bg.bottom.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/bg.middle.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 529788,
+		"inputAbbreviatedPath": "\/assets\/img\/bg.middle.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/bg.middle.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/bg.top.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

@@ -40,6 +40,11 @@ function showContent(sectionIndex) {
   });
 }
 
+//- Hide Content Bands
+function hideContent() {
+  $('body').removeClass('section-open');
+}
+
 //-- Re-init/Destroy Galleries on Resize
 function resizeFunc() {
 
@@ -89,9 +94,9 @@ $(document).ready(function(){
     e.preventDefault();
     var sectionIndex = $(this).parent().index();
 
-    // scroll to top if on mobile
-    if($(window).width() < 768) {
-      $('.header').velocity('scroll', {
+    // scroll up!
+    if($(window).scrollTop() > 0) {
+      $('body').velocity('scroll', {
         duration: 400,
         easing: 'easeInOutExpo',
         complete: function() {
@@ -103,7 +108,25 @@ $(document).ready(function(){
     }
   });
 
-  $('#contact-form').validate({
+  $('a.close').on('click', function(e) {
+    e.preventDefault();
+
+    // scroll up!
+    if($(window).scrollTop() > 0) {
+      $('body').velocity('scroll', {
+        duration: 400,
+        easing: 'easeInOutExpo',
+        complete: function() {
+          hideContent();
+        }
+      });
+    } else {
+      hideContent();
+    }
+
+  });
+
+  $('#sign-up').validate({
     highlight: function(element, errorClass) {
       $(element).parent().addClass(errorClass);
     },
@@ -112,52 +135,40 @@ $(document).ready(function(){
     },
     submitHandler: function(form, event) {
       event.preventDefault();
-      var submitText = $('#contact-form .btn').html();
-      $('#contact-form .btn').html('Sending...');
+      var submitText = $('#sign-up .btn').text();
+      $('#sign-up .btn').html('Sending...');
       $.ajax({
         url: '/process.php',
         type: 'POST',
         data: $(form).serialize(),
         success: function(response) {
           if(response['Success'] === 0) {
-            $('#contact-form .btn').html(submitText);
+            $('#sign-up .btn').text(submitText);
 
-            $('#contact-form .btn').html('Error! Try again');
+            $('#sign-up .btn').text('Error! Try again');
 
           } else if(response['Success'] === 1) {
-            $('#contact-form').slideUp(1000, 'easeInOutExpo', function() {
-              $('#contact-form input, #contact-form select').val('');
-              $('#contact-form .btn').html(submitText);
-              $('#success-msg').slideDown(700, 'easeInOutExpo');
-            });
+            // $('#sign-up').
           }
         },
         error: function() {
-          $('#contact-form .btn').html('Error! Try again');
+          $('#sign-up .btn').text('Error! Try again');
         }
-      })
+      });
       return false;
     },
     // all fields are required
     rules: {
-      contact_name: {
+      contact_fname: {
+        required: true,
+      },
+      contact_lname: {
         required: true,
       },
       contact_email: {
         required: true,
         email: true,
-      },
-      contact_phone: {
-        required: true,
       }
-    },
-    messages: {
-      contact_name: 'Required',
-      contact_email: {
-        required: 'Required',
-        email: 'Must be valid email'
-      },
-      contact_phone: 'Required'
     }
   });
 
