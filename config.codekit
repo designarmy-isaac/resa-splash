@@ -55,6 +55,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/bottom-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 201729,
+		"inputAbbreviatedPath": "\/assets\/img\/bottom-1.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/bottom-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/bottom-2.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
