@@ -272,7 +272,7 @@ hr {
 /*----- Scaffolding -----*/
 
 .wrapper {
-  max-width: 450px;
+  max-width: 720px;
   margin: 0 auto;
 }
 
@@ -1065,6 +1065,7 @@ ul.slick-dots {
       font-size: .8em;
       letter-spacing: 2px;
       text-align: left;
+      color: $white;
 
       &.error {
         display: none !important;
@@ -1075,8 +1076,8 @@ ul.slick-dots {
       display: block;
       width: 100%;
       padding: 1em;
-      border: 1px solid $gray;
-      color: $gray;
+      border: 1px solid $white;
+      color: $white;
       font-size: .75em;
       transition: all .2s linear;
 

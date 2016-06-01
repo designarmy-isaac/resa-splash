@@ -307,7 +307,7 @@ blockquote {
 
 /*----- Scaffolding -----*/
 .wrapper {
-  max-width: 450px;
+  max-width: 720px;
   margin: 0 auto; }
 
 /*----- Header -----*/
@@ -1108,15 +1108,16 @@ ul.slick-dots {
     font-family: 'DanmarkBold', Georgia, serif;
     font-size: .8em;
     letter-spacing: 2px;
-    text-align: left; }
+    text-align: left;
+    color: #ffffff; }
     .fields .field label.error {
       display: none !important; }
   .fields .field .form-control {
     display: block;
     width: 100%;
     padding: 1em;
-    border: 1px solid #404041;
-    color: #404041;
+    border: 1px solid #ffffff;
+    color: #ffffff;
     font-size: .75em;
     -webkit-transition: all .2s linear;
             transition: all .2s linear; }
