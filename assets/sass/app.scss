@@ -449,7 +449,7 @@ ul.social {
     position: fixed;
     bottom: 0;
     right: 0;
-    padding: 0 4em 2em 0;
+    padding: 0 2em 2em 0;
     height: auto;
     background: none;
     text-align: right;
@@ -808,7 +808,7 @@ a.close {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1.75em 4em 0 0;
+  margin: 1.75em 2em 0 0;
   background: $gray;
   color: $white;
   border-radius: 50%;
@@ -1076,8 +1076,8 @@ ul.slick-dots {
       display: block;
       width: 100%;
       padding: 1em;
-      border: 1px solid $white;
-      color: $white;
+      border: 1px solid $darkGray;
+      color: $darkGray;
       font-size: .75em;
       transition: all .2s linear;
 
@@ -1117,6 +1117,8 @@ ul.slick-dots {
 
       .form-control {
         text-align: center;
+        border-color: $white;
+        color: $white;
       }
 
       &.submit {

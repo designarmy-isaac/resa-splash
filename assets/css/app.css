@@ -457,7 +457,7 @@ ul.social {
       position: fixed;
       bottom: 0;
       right: 0;
-      padding: 0 4em 2em 0;
+      padding: 0 2em 2em 0;
       height: auto;
       background: none;
       text-align: right;
@@ -816,7 +816,7 @@ a.close {
   position: fixed;
   top: 0;
   right: 0;
-  margin: 1.75em 4em 0 0;
+  margin: 1.75em 2em 0 0;
   background: #404041;
   color: #ffffff;
   border-radius: 50%;
@@ -1116,8 +1116,8 @@ ul.slick-dots {
     display: block;
     width: 100%;
     padding: 1em;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid #231f20;
+    color: #231f20;
     font-size: .75em;
     -webkit-transition: all .2s linear;
             transition: all .2s linear; }
@@ -1165,6 +1165,8 @@ ul.slick-dots {
         margin: 5em 0 1em;
         text-align: center; }
       .fields .field .form-control {
-        text-align: center; }
+        text-align: center;
+        border-color: #ffffff;
+        color: #ffffff; }
       .fields .field.submit {
         margin-top: 1em; } }
