@@ -1065,7 +1065,7 @@ ul.slick-dots {
       font-size: .8em;
       letter-spacing: 2px;
       text-align: left;
-      color: $white;
+      color: $darkGray;
 
       &.error {
         display: none !important;
@@ -1113,6 +1113,7 @@ ul.slick-dots {
       label {
         margin: 5em 0 1em;
         text-align: center;
+        color: $white;
       }
 
       .form-control {

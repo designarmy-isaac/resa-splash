@@ -1109,7 +1109,7 @@ ul.slick-dots {
     font-size: .8em;
     letter-spacing: 2px;
     text-align: left;
-    color: #ffffff; }
+    color: #231f20; }
     .fields .field label.error {
       display: none !important; }
   .fields .field .form-control {
@@ -1163,7 +1163,8 @@ ul.slick-dots {
       text-align: center; }
       .fields .field label {
         margin: 5em 0 1em;
-        text-align: center; }
+        text-align: center;
+        color: #ffffff; }
       .fields .field .form-control {
         text-align: center;
         border-color: #ffffff;
