@@ -122,6 +122,7 @@ html, body {
 body {
   overflow: hidden;
   font-family: 'FMRegular', Georgia, serif;
+  font-feature-settings: "liga" 0;
   color: $darkGray;
 
   &.loaded,

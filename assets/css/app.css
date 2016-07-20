@@ -229,6 +229,9 @@ html, body {
 body {
   overflow: hidden;
   font-family: 'FMRegular', Georgia, serif;
+  -webkit-font-feature-settings: "liga" 0;
+     -moz-font-feature-settings: "liga" 0;
+          font-feature-settings: "liga" 0;
   color: #231f20; }
   body.loaded, .no-js body {
     overflow: visible; }
